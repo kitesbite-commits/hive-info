@@ -1,0 +1,199 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Delete Account | Ather Hive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(18, 18, 24, 0.9);
+            backdrop-filter: blur(2px);
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffffff, #ff8c8c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .warning-box {
+            background: rgba(255, 80, 80, 0.12);
+            border-left: 4px solid #ff5252;
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+
+        .steps {
+            background: rgba(108, 99, 255, 0.08);
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .step-number {
+            background: #6c63ff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .email-box {
+            background: #1e1e2a;
+            padding: 1rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(108, 99, 255, 0.4);
+        }
+
+        .email {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #ffb4b4;
+            letter-spacing: 0.5px;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: #aaa;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        a {
+            color: #ff9f9f;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-icon">🗑️</div>
+        <h1>Delete Your Account</h1>
+        <p>If you wish to permanently remove your Ather Hive account and all associated data, follow the simple steps below. This action is <strong>irreversible</strong>.</p>
+
+        <div class="warning-box">
+            ⚠️ <strong>What gets deleted:</strong><br>
+            • Your username & profile<br>
+            • All chat messages (public & private)<br>
+            • Friends list & likes<br>
+            • Uploaded avatar & bio<br>
+            • Feed history
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <span>Open your email app (Gmail, Outlook, etc.)</span>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <span>Compose a new email to: <strong style="color:#ffb4b4">kitesbite@gmail.com</strong></span>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <span>Use subject line: <strong>"Account Deletion Request – Ather Hive"</strong></span>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                <span>Include your <strong>username</strong> and the <strong>email address you registered with</strong>.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">5</span>
+                <span>Send the email. You'll receive a confirmation reply within 3–5 business days.</span>
+            </div>
+        </div>
+
+        <div class="email-box">
+            📧 <strong>Send deletion request to:</strong><br>
+            <span class="email">kitesbite@gmail.com</span>
+        </div>
+
+        <p><strong>⏱️ Processing time:</strong> Account deletion takes <strong>up to 30 days</strong> from the date of your request. You will receive a final confirmation email once your account is erased.</p>
+        <p><strong>🔁 Change of mind?</strong> If you log into your account within 7 days of requesting deletion, the request will be automatically cancelled.</p>
+
+        <hr />
+
+        <div class="note">
+            ❗ Never share your password with anyone. We will never ask for your password via email.<br>
+            For other questions, contact <a href="mailto:kitesbite@gmail.com">kitesbite@gmail.com</a>
+        </div>
+
+        <footer>
+            Ather Hive – Your privacy is respected.
+        </footer>
+    </div>
+</body>
+</html>
+```
