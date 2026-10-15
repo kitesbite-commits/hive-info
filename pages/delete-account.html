@@ -1,350 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Ather Hive - Account Deletion: Permanently remove your account and associated data. Secure email-based request process.">
-    <title>Secure Account Deletion | Ather Hive</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: radial-gradient(circle at 10% 20%, #0b0e17, #03050b);
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.55;
-            color: #eceff4;
-            padding: 2rem 1.2rem;
-            min-height: 100vh;
-            letter-spacing: -0.01em;
-        }
-
-        /* smooth dynamic container with glassmorphism */
-        .container {
-            max-width: 820px;
-            margin: 0 auto;
-            background: rgba(18, 22, 32, 0.72);
-            backdrop-filter: blur(12px);
-            border-radius: 2rem;
-            padding: 2.2rem 2.5rem;
-            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(66, 78, 110, 0.35);
-            transition: all 0.2s ease;
-        }
-
-        /* header accent */
-        .title-section {
-            margin-bottom: 1.8rem;
-            border-left: 3px solid #ff8c6b;
-            padding-left: 1.2rem;
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            font-weight: 600;
-            background: linear-gradient(120deg, #ffffff, #cbabff, #ff9a7c);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.25rem;
-        }
-
-        .subhead {
-            font-size: 1rem;
-            color: #a5b3cf;
-            font-weight: 450;
-            margin-top: 0.25rem;
-        }
-
-        /* alert / warning card with soft accent */
-        .data-loss-card {
-            background: rgba(235, 85, 70, 0.08);
-            border-radius: 1.25rem;
-            padding: 1rem 1.6rem;
-            margin: 1.8rem 0;
-            border: 1px solid rgba(235, 85, 70, 0.28);
-            transition: 0.2s;
-        }
-
-        .data-loss-card strong {
-            color: #ff9f8f;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .data-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem 1.5rem;
-            margin-top: 0.6rem;
-        }
-
-        .data-list span {
-            background: rgba(45, 55, 80, 0.5);
-            padding: 0.25rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 450;
-            letter-spacing: -0.2px;
-            color: #ccddf8;
-        }
-
-        /* steps modular design */
-        .steps-module {
-            background: rgba(20, 28, 40, 0.7);
-            border-radius: 1.5rem;
-            padding: 0.2rem 0;
-            margin: 1.8rem 0;
-            backdrop-filter: blur(4px);
-        }
-
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem 1.4rem;
-            border-bottom: 1px solid rgba(90, 110, 140, 0.2);
-            transition: background 0.15s;
-        }
-
-        .step-item:last-child {
-            border-bottom: none;
-        }
-
-        .step-marker {
-            background: linear-gradient(145deg, #2f3e6e, #1f2a48);
-            width: 32px;
-            height: 32px;
-            border-radius: 40px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0;
-        }
-
-        .step-text {
-            font-size: 0.95rem;
-            font-weight: 470;
-            color: #eef3ff;
-            line-height: 1.45;
-        }
-
-        .step-text strong {
-            color: #ffb882;
-            font-weight: 600;
-        }
-
-        .email-highlight {
-            background: #0e121f;
-            border-radius: 1.25rem;
-            padding: 1.2rem;
-            margin: 1.4rem 0 1rem;
-            text-align: center;
-            border: 1px solid rgba(120, 140, 200, 0.5);
-            box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.4);
-        }
-
-        .email-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 500;
-            color: #90a7d0;
-        }
-
-        .email-address {
-            font-size: 1.55rem;
-            font-weight: 540;
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            background: linear-gradient(135deg, #ffcfb0, #ffb39c);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            word-break: break-all;
-            letter-spacing: -0.3px;
-        }
-
-        .info-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.8rem 0 1rem;
-        }
-
-        .info-card {
-            flex: 1;
-            background: rgba(12, 16, 24, 0.6);
-            border-radius: 1.2rem;
-            padding: 1rem 1.2rem;
-            border-left: 2px solid #ff8a6c;
-        }
-
-        .info-card p {
-            font-size: 0.9rem;
-        }
-
-        .info-card strong {
-            color: #ffbc9c;
-            display: block;
-            margin-bottom: 0.4rem;
-        }
-
-        hr {
-            margin: 2rem 0 1rem;
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #5271b0, #ff9770, #5271b0, transparent);
-        }
-
-        .footer-note {
-            font-size: 0.75rem;
-            text-align: center;
-            color: #7f8fa4;
-            margin-top: 2rem;
-            padding-top: 0.5rem;
-            border-top: 1px dashed rgba(100, 120, 150, 0.3);
-        }
-
-        a {
-            color: #ffb48a;
-            text-decoration: none;
-            border-bottom: 1px dotted rgba(255, 180, 138, 0.4);
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #ffcfaf;
-            border-bottom-color: #ffae88;
-        }
-
-        /* tiny interactive hover + dynamic micro-interactions */
-        .step-item:hover {
-            background: rgba(255, 140, 100, 0.05);
-            border-radius: 1rem;
-        }
-
-        .email-highlight:hover {
-            border-color: #ff946e;
-            transition: all 0.2s;
-            background: #11151f;
-        }
-
-        @media (max-width: 650px) {
-            .container {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-            .email-address {
-                font-size: 1.1rem;
-            }
-            .step-text {
-                font-size: 0.85rem;
-            }
-            .info-grid {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-        }
-
-        /* smooth focus and accessibility improvements */
-        button, a, .step-marker {
-            user-select: none;
-        }
-        ::selection {
-            background: #ff9470;
-            color: #0a0e18;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Delete your Ather Hive account and data. Send one email and we erase your account within 30 days.">
+<title>Delete your account | Ather Hive</title>
+<style>
+:root{--bg:#0d1117;--panel:#151b24;--panel2:#1b2330;--line:#2a3547;--text:#e8edf5;--muted:#9aa8bd;--accent:#ffa94d;--accent2:#5eead4;--danger:#ff7b72}
+@media (prefers-color-scheme:light){:root{--bg:#f4f6fa;--panel:#fff;--panel2:#eef2f8;--line:#d5dce8;--text:#182030;--muted:#556178;--accent:#c2570c;--accent2:#0f766e;--danger:#b42318}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top) 1rem 3rem}
+.wrap{max-width:760px;margin:0 auto}
+header{padding:3rem 0 1.5rem}
+h1{font-size:clamp(2rem,6vw,2.8rem);line-height:1.1;letter-spacing:-.03em;font-weight:750}
+.lead{margin-top:1rem;color:var(--muted);max-width:60ch}
+section{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:1.5rem 1.7rem;margin-bottom:1.1rem}
+h2{font-size:1.2rem;margin-bottom:.8rem}
+p{margin-bottom:.8rem;max-width:65ch}
+ul{margin:.4rem 0 .8rem 1.2rem}
+li{margin:.3rem 0}
+ol{list-style:none;counter-reset:s}
+ol li{counter-increment:s;display:flex;gap:.9rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+ol li:last-child{border-bottom:0}
+ol li::before{content:counter(s);flex:none;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:700;font-size:.9rem;display:grid;place-items:center;margin-top:.1rem}
+.warn{border-color:var(--danger)}
+.warn h2{color:var(--danger)}
+.btn{display:inline-block;background:var(--accent);color:#111;font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:.7rem;margin:.4rem 0}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+.em{font-weight:650;word-break:break-all}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-size:.82rem}
+a{color:var(--accent2)}
+footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:2rem}
+</style>
 </head>
 <body>
+<div class="wrap">
+<header>
+<h1>Delete your Ather Hive account</h1>
+<p class="lead">This page is for the Ather Hive Android app (com.ather.hive). Delete it yourself in the app in a few taps, or send us an email. Either way, your account and data are permanently erased.</p>
+</header>
 
-<div class="container">
-    <div class="title-section">
-        <h1>Delete your account</h1>
-        <div class="subhead">Permanent removal of your Ather Hive identity and all data.</div>
-    </div>
+<section class="warn">
+<h2>This cannot be undone</h2>
+<p>When deletion is complete, these are permanently erased:</p>
+<ul>
+<li>Your username and profile (avatar and bio)</li>
+<li>Your public and private messages</li>
+<li>Your friends and connections</li>
+<li>Your feed, likes, and reactions</li>
+<li>Your push notification token and device identifier</li>
+</ul>
+</section>
 
-    <!-- irreversible action alert - professional warning -->
-    <div class="data-loss-card">
-        <strong>Irreversible action</strong>
-        <div class="data-list">
-            <span>username & profile</span>
-            <span>private & public messages</span>
-            <span>friends & connections</span>
-            <span>uploaded avatar & bio</span>
-            <span>feed & history</span>
-            <span>likes & reactions</span>
-        </div>
-        <p style="margin-top: 10px; font-size: 0.85rem;">All linked information will be purged from our systems within 30 days after request confirmation.</p>
-    </div>
+<section>
+<h2>Option 1: Delete in the app</h2>
+<ol>
+<li><div>Open Ather Hive and tap the <strong>menu button</strong> at the top right.</div></li>
+<li><div>Tap <strong>Settings</strong>.</div></li>
+<li><div>Tap <strong>Delete account and data</strong> and confirm.</div></li>
+</ol>
+<p>Your data is erased within 30 days.</p>
+</section>
 
-    <!-- step by step guide: clean, minimal icons replaced with numbers -->
-    <div class="steps-module">
-        <div class="step-item">
-            <div class="step-marker">1</div>
-            <div class="step-text">Open your preferred email client (Gmail, Outlook, ProtonMail, etc.)</div>
-        </div>
-        <div class="step-item">
-            <div class="step-marker">2</div>
-            <div class="step-text">Compose a new message to: <strong>kitesbite@gmail.com</strong> — this is our secure deletion channel.</div>
-        </div>
-        <div class="step-item">
-            <div class="step-marker">3</div>
-            <div class="step-text">Subject line must read: <strong>"Account Deletion Request – Ather Hive"</strong></div>
-        </div>
-        <div class="step-item">
-            <div class="step-marker">4</div>
-            <div class="step-text">Include your <strong>registered username</strong> and the <strong>email address linked to your account</strong> for identity verification.</div>
-        </div>
-        <div class="step-item">
-            <div class="step-marker">5</div>
-            <div class="step-text">Send the request. You will receive an automated acknowledgment, then a final human verification within 3–5 business days.</div>
-        </div>
-    </div>
+<section>
+<h2>Option 2: Request deletion by email</h2>
+<p>Use this if you cannot open the app or no longer have it installed.</p>
+<ol>
+<li><div>Open your email app and write to <span class="em">orangepenguinflies@gmail.com</span>.</div></li>
+<li><div>Use the subject: <strong>Account Deletion Request - Ather Hive</strong></div></li>
+<li><div>In the message, include your <strong>username</strong> and the <strong>email linked to your account</strong> (if you added one) so we can verify it is you.</div></li>
+<li><div>Send it. We reply to confirm we received your request within 72 hours.</div></li>
+<li><div>We verify your request, erase your data within 30 days, and email you when it is done.</div></li>
+</ol>
+<a class="btn" href="mailto:orangepenguinflies@gmail.com?subject=Account%20Deletion%20Request%20-%20Ather%20Hive&amp;body=Username%3A%20%0ALinked%20email%20(if%20any)%3A%20">Email deletion request</a>
+<p>We never ask for your password. Do not send it.</p>
+</section>
 
-    <!-- email block, prominent and clean -->
-    <div class="email-highlight">
-        <div class="email-label">Official deletion request address</div>
-        <div class="email-address">kitesbite@gmail.com</div>
-        <div style="font-size: 0.7rem; margin-top: 8px; color: #8fabc8;">Attn: Data Protection & Account Removal</div>
-    </div>
+<section>
+<h2>What we keep and for how long</h2>
+<div class="tw"><table>
+<tr><th>Data</th><th>After deletion</th></tr>
+<tr><td>Account, profile, messages, friends, feed</td><td>Erased within 30 days</td></tr>
+<tr><td>Reports of child safety violations or serious abuse, with related evidence</td><td>Kept only as long as the law requires or an investigation needs</td></tr>
+<tr><td>Purchase records held by Google Play</td><td>Managed by Google under its own policies</td></tr>
+</table></div>
+</section>
 
-    <!-- dynamic info cards: additional context & policy -->
-    <div class="info-grid">
-        <div class="info-card">
-            <strong>Processing timeline</strong>
-            <p>Full removal completes within <strong>30 days</strong> from request validation. You will receive a final confirmation email once your account is permanently erased.</p>
-        </div>
-        <div class="info-card">
-            <strong>Cooling period</strong>
-            <p>If you log into your Ather Hive account within <strong>7 days</strong> after submitting deletion request, the process will be automatically canceled. Consider this your grace window.</p>
-        </div>
-        <div class="info-card">
-            <strong>Data safety</strong>
-            <p>We never request credentials. Keep your password secure. For any support queries, reply to your deletion confirmation thread.</p>
-        </div>
-    </div>
+<section>
+<h2>Changed your mind?</h2>
+<p>For email requests, log in to Ather Hive within <strong>7 days</strong> of sending your request and the deletion is canceled automatically.</p>
+</section>
 
-    <!-- legal / additional information, separator included -->
-    <hr />
+<section>
+<h2>Questions</h2>
+<p>Reply to your confirmation email or write to <a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a>. Read how we handle data and protect children in our <a href="privacy-policy.html">Privacy Policy and Child Safety Standards</a>.</p>
+</section>
 
-    <div class="footer-note">
-        <p>Ather Hive respects your right to erasure under applicable privacy laws. For additional inquiries or to expedite verification, contact us directly at <a href="mailto:kitesbite@gmail.com">kitesbite@gmail.com</a>. Allow up to 48 hours for initial response.</p>
-        <p style="margin-top: 0.8rem;">© Ather Hive — your digital well-being and privacy come first.</p>
-    </div>
+<footer>Ather Hive</footer>
 </div>
-
 </body>
 </html>
