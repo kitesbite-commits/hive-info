@@ -1,327 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Ather Hive Privacy Policy – Data collection, security practices, retention, child safety, and your rights under applicable laws. Transparent and user-first approach.">
-    <title>Privacy Policy | Ather Hive</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: radial-gradient(circle at 10% 20%, #0b0e17, #03050b);
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.55;
-            color: #eceff4;
-            padding: 2rem 1.2rem;
-            min-height: 100vh;
-            letter-spacing: -0.01em;
-        }
-
-        /* smooth glassmorphic container — dynamic & consistent */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(18, 22, 32, 0.74);
-            backdrop-filter: blur(12px);
-            border-radius: 2rem;
-            padding: 2.2rem 2.5rem;
-            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(66, 78, 110, 0.4);
-            transition: all 0.2s ease;
-        }
-
-        /* title area with left accent */
-        .title-section {
-            margin-bottom: 1.4rem;
-            border-left: 3px solid #ff8c6b;
-            padding-left: 1.2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            background: linear-gradient(120deg, #ffffff, #cbabff, #ff9a7c);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.25rem;
-        }
-
-        .last-updated {
-            font-size: 0.8rem;
-            color: #8da0bc;
-            margin-top: 0.25rem;
-            font-weight: 450;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 550;
-            margin-top: 2rem;
-            margin-bottom: 0.85rem;
-            color: #e6e9ff;
-            border-left: 3px solid #ff8c6b;
-            padding-left: 1rem;
-            letter-spacing: -0.3px;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #e2e8fa;
-            font-weight: 420;
-        }
-
-        ul, ol {
-            margin: 1rem 0 1rem 1.8rem;
-        }
-
-        li {
-            margin: 0.5rem 0;
-            color: #cfdcf5;
-        }
-
-        /* card grid for data types */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0 1rem;
-        }
-
-        .info-card {
-            background: rgba(26, 32, 46, 0.7);
-            border-radius: 1.25rem;
-            padding: 1rem 1.2rem;
-            border: 1px solid rgba(255, 140, 107, 0.25);
-            transition: transform 0.1s ease, border-color 0.2s;
-            backdrop-filter: blur(2px);
-        }
-
-        .info-card strong {
-            color: #ffbc9a;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .info-card:hover {
-            border-color: #ff8c6b;
-            background: rgba(32, 40, 58, 0.8);
-        }
-
-        .badge {
-            background: #ff7a55;
-            color: #0b0e17;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.2rem 0.7rem;
-            border-radius: 40px;
-            display: inline-block;
-            margin-right: 0.6rem;
-            letter-spacing: -0.2px;
-        }
-
-        .highlight {
-            background: rgba(255, 140, 107, 0.18);
-            padding: 0.2rem 0.5rem;
-            border-radius: 12px;
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: #ffc8ae;
-        }
-
-        hr {
-            margin: 2rem 0 1.5rem;
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #ff8f6b, #b873ff, transparent);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.75rem;
-            color: #7c8aa8;
-        }
-
-        a {
-            color: #ffb48a;
-            text-decoration: none;
-            border-bottom: 1px dotted rgba(255, 180, 138, 0.4);
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #ffd0b0;
-            border-bottom-color: #ffb48a;
-        }
-
-        /* contact block — consistent with deletion page */
-        .contact-block {
-            background: rgba(20, 28, 40, 0.8);
-            border-radius: 1.5rem;
-            padding: 1rem 1.4rem;
-            margin: 1.5rem 0 1rem;
-            border: 1px solid rgba(255, 140, 107, 0.35);
-            display: inline-flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 0.75rem;
-            width: 100%;
-        }
-
-        .contact-email {
-            font-size: 1.3rem;
-            font-weight: 520;
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            background: linear-gradient(135deg, #ffd1b5, #ffae8c);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
-        }
-
-        /* child safety specific highlight box */
-        .safety-highlight {
-            background: rgba(255, 124, 88, 0.1);
-            border-left: 4px solid #ff7a55;
-            padding: 1rem 1.4rem;
-            border-radius: 1rem;
-            margin: 1rem 0 1rem 0;
-        }
-
-        @media (max-width: 680px) {
-            .container {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.9rem;
-            }
-            h2 {
-                font-size: 1.3rem;
-            }
-            .contact-email {
-                font-size: 1rem;
-            }
-        }
-
-        ::selection {
-            background: #ff9470;
-            color: #0a0e18;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Ather Hive Privacy Policy and Child Safety Standards: what we collect, how we protect it, how to delete your data, and our zero-tolerance policy on child sexual abuse and exploitation (CSAE).">
+<title>Privacy Policy and Child Safety Standards | Ather Hive</title>
+<style>
+:root{--bg:#0d1117;--panel:#151b24;--panel2:#1b2330;--line:#2a3547;--text:#e8edf5;--muted:#9aa8bd;--accent:#ffa94d;--accent2:#5eead4;--danger:#ff7b72}
+@media (prefers-color-scheme:light){:root{--bg:#f4f6fa;--panel:#fff;--panel2:#eef2f8;--line:#d5dce8;--text:#182030;--muted:#556178;--accent:#c2570c;--accent2:#0f766e;--danger:#b42318}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top) 1rem 3rem}
+.wrap{max-width:860px;margin:0 auto}
+header{padding:3rem 0 1.5rem}
+h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;letter-spacing:-.03em;font-weight:750}
+.meta{color:var(--muted);font-size:.9rem;margin-top:.6rem}
+.lead{margin-top:1.2rem;color:var(--muted);max-width:65ch}
+nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
+nav a{background:var(--panel);border:1px solid var(--line);padding:.35rem .8rem;border-radius:99px;font-size:.85rem;color:var(--text);text-decoration:none}
+nav a:hover,nav a:focus-visible{border-color:var(--accent);outline:none}
+nav a.cs{border-color:var(--danger);color:var(--danger)}
+section{background:var(--panel);border:1px solid var(--line);border-radius:1rem;padding:1.6rem 1.7rem;margin-bottom:1.1rem;scroll-margin-top:1rem}
+h2{font-size:1.3rem;letter-spacing:-.01em;margin-bottom:.8rem}
+h3{font-size:1rem;margin:1.1rem 0 .3rem;color:var(--accent)}
+p{margin-bottom:.8rem;max-width:70ch}
+ul{margin:.4rem 0 .9rem 1.2rem}
+li{margin:.35rem 0;max-width:70ch}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin:.6rem 0 1rem}
+.tw{overflow-x:auto}
+th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.82rem}
+a{color:var(--accent2)}
+a:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.safety{border-color:var(--danger);border-width:2px;background:var(--panel2)}
+.callout{background:var(--bg);border-left:4px solid var(--danger);padding:1rem 1.2rem;border-radius:.6rem;margin:1rem 0}
+.callout strong{display:block;margin-bottom:.3rem}
+.contact{background:var(--panel2);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.2rem;margin:1rem 0}
+.contact .em{font-size:1.15rem;font-weight:650;word-break:break-all}
+footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:2rem}
+@media(max-width:600px){section{padding:1.2rem}}
+</style>
 </head>
 <body>
-<div class="container">
-    <div class="title-section">
-        <h1>Privacy Policy</h1>
-        <div class="last-updated">Effective: June 2, 2026  |  Last revised: June 2026  |  Ather Hive</div>
-    </div>
+<div class="wrap">
+<header>
+<h1>Privacy Policy and Child Safety Standards</h1>
+<div class="meta">Ather Hive (Android app) &middot; Effective October 15, 2026 &middot; Last updated October 15, 2026</div>
+<p class="lead">Ather Hive is a social chat app. This page explains what we collect, how we protect it, how you can delete it, and the standards we enforce to keep children safe. By using Ather Hive you agree to this policy.</p>
+<nav aria-label="Sections">
+<a href="#collect">Data we collect</a>
+<a href="#protect">Security</a>
+<a href="#retention">Retention and deletion</a>
+<a href="#sharing">Sharing</a>
+<a href="#child-safety" class="cs">Child safety standards</a>
+<a href="#rights">Your rights</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <p><strong>Ather Hive</strong> is committed to transparency and data minimalism. This policy explains how we collect, store, and protect your information when you use our platform. By using Ather Hive, you agree to the practices described below.</p>
+<section id="collect">
+<h2>1. Information we collect</h2>
+<p>We collect only what the app needs to work and to keep it safe.</p>
+<div class="tw"><table>
+<tr><th>Data</th><th>Why we need it</th></tr>
+<tr><td>Username, hashed password, optional recovery email</td><td>Create and secure your account; verify deletion requests</td></tr>
+<tr><td>Optional avatar image and short bio</td><td>Show your profile to other users</td></tr>
+<tr><td>Public room messages and private messages</td><td>Deliver chat. Private messages are encrypted in transit.</td></tr>
+<tr><td>Friends list, likes, feed interactions</td><td>Social features</td></tr>
+<tr><td>IP address at registration and a device identifier</td><td>Prevent abuse, spam, and ban evasion</td></tr>
+<tr><td>Push notification token (Firebase Cloud Messaging)</td><td>Send you notifications you have allowed</td></tr>
+<tr><td>Purchase status (Google Play Billing)</td><td>Unlock items you buy. Payment details are handled by Google Play; we never see your card number.</td></tr>
+</table></div>
+<p>If you choose an avatar, the app reads only the photo you pick and crops it on your device before upload. We do not collect precise location, your contacts, or your browsing history. We do not run advertising or third-party analytics trackers.</p>
+</section>
 
-    <!-- 1. Information collected -->
-    <h2>1. Information we collect</h2>
-    <p>We only collect the data necessary to deliver a functional, secure, and social experience. No unnecessary tracking or surveillance.</p>
-    <div class="card-grid">
-        <div class="info-card"><strong>Account identity</strong> Username, hashed password, recovery email (optional but used for deletion).</div>
-        <div class="info-card"><strong>Profile data</strong> Avatar image (optional) and short biography.</div>
-        <div class="info-card"><strong>Messages & content</strong> Public room chats, private messages (encrypted in transit).</div>
-        <div class="info-card"><strong>Social graph</strong> Friends list, likes, feed interactions.</div>
-        <div class="info-card"><strong>Security metadata</strong> IP address at registration, device fingerprint (to prevent abuse).</div>
-    </div>
-    <p>We <strong>do not</strong> collect precise location, contacts, payment information, or browsing history outside the app. All credentials are hashed or encrypted.</p>
+<section id="protect">
+<h2>2. How we protect your data</h2>
+<ul>
+<li><strong>Encryption in transit:</strong> TLS for all API and WebSocket traffic.</li>
+<li><strong>Passwords:</strong> hashed with bcrypt (cost factor 12), never stored in plain text.</li>
+<li><strong>Access control:</strong> signed tokens (JWT) and limited internal database access.</li>
+<li><strong>Hosting:</strong> secure cloud infrastructure (Google Cloud) with regular updates and monitoring.</li>
+</ul>
+<p>No system is completely immune, but we work to reduce the risk of breaches and will act promptly if one occurs.</p>
+</section>
 
-    <!-- 2. Storage & protection -->
-    <h2>2. How we store & protect your data</h2>
-    <p>Your privacy is protected using modern security infrastructure:</p>
-    <ul>
-        <li><span class="badge">encryption</span> TLS 1.3 for all network traffic (WebSockets & API) – no third-party eavesdropping.</li>
-        <li><span class="badge">password hashing</span> bcrypt (cost factor 12) – never stored in plaintext.</li>
-        <li><span class="badge">access control</span> Strict internal policies, signed JWTs, and limited database access.</li>
-        <li><span class="badge">infrastructure</span> Secure cloud environment (Google Cloud) with regular updates and monitoring.</li>
-    </ul>
-    <p>Although no system is completely immune, we adopt industry-leading countermeasures to mitigate data breaches.</p>
+<section id="retention">
+<h2>3. Data retention and account deletion</h2>
+<ul>
+<li><strong>Public rooms:</strong> the last 100 messages per room are kept; older messages are removed automatically.</li>
+<li><strong>Private messages:</strong> the last 30 messages per conversation are kept; older ones are removed.</li>
+<li><strong>Account data:</strong> after a verified deletion request, your username, messages, friends, avatar, bio, and feed are permanently erased within 30 days.</li>
+<li><strong>Safety records:</strong> if content was reported for child safety or other serious abuse, we may keep the report and related evidence for as long as the law requires or an investigation needs, even after account deletion.</li>
+</ul>
+<p><strong>Delete directly in the app:</strong> open the top right menu, tap <strong>Settings</strong>, then tap <strong>Delete account and data</strong>. You can also follow the steps on our <a href="delete-account.html">account deletion page</a> or email <a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a> with your username. Logging in within 7 days of an email request cancels it.</p>
+</section>
 
-    <!-- 3. Data retention & deletion (with updated email) -->
-    <h2>3. Data retention & deletion</h2>
-    <p>We retain information only as long as needed to provide the service or comply with legal obligations.</p>
-    <ul>
-        <li><span class="badge">public rooms</span> Last <strong>100 messages</strong> per room are stored; older ones rotate automatically.</li>
-        <li><span class="badge">private messages</span> Last <strong>30 messages</strong> per conversation are kept; excess messages are purged.</li>
-        <li><span class="badge">account data</span> Upon verified deletion request, all associated data (username, messages, friends, avatar, feed) is <strong>permanently erased within 30 days</strong>.</li>
-    </ul>
-    <p>To request full account deletion, send an email to <strong>kitesbite@gmail.com</strong> with your registered username and the email address linked to your account. You will receive an acknowledgement within 72 hours and final confirmation after successful removal. If you log in within 7 days after the request, the deletion is automatically canceled.</p>
+<section id="sharing">
+<h2>4. Sharing with third parties</h2>
+<p>We never sell, rent, or trade your personal data. We share data only:</p>
+<ul>
+<li>With service providers that run the app for us: Google Cloud (hosting), Firebase Cloud Messaging (notifications), and Google Play (purchases).</li>
+<li>When required by law, court order, or a valid legal request, including reports of child exploitation to the authorities.</li>
+<li>To protect the safety and integrity of Ather Hive and its users, and to enforce our Terms.</li>
+</ul>
+</section>
 
-    <!-- 4. Third-party sharing -->
-    <h2>4. Sharing information with third parties</h2>
-    <p>We never sell, rent, or trade your personal data. Exceptions are strictly limited to:</p>
-    <ul>
-        <li>Comply with applicable laws, court orders, or legal processes.</li>
-        <li>Protect the security or integrity of Ather Hive (e.g., investigating abuse).</li>
-        <li>Enforce our Terms of Service and prevent harm to users.</li>
-    </ul>
-    <p>Ather Hive does not integrate with third-party ad networks or analytics trackers. Your messages and identity remain confidential.</p>
+<section id="child-safety" class="safety">
+<h2>5. Child Safety Standards</h2>
+<div class="callout">
+<strong>Zero tolerance for child sexual abuse and exploitation (CSAE)</strong>
+Ather Hive prohibits child sexual abuse material (CSAM), child sexual exploitation, grooming, sexualization of minors, sextortion, and any content or behavior that endangers a child. This applies to every room, private message, profile, avatar, and bio on Ather Hive.
+</div>
 
-    <!-- 5. Child safety section - comprehensive and prominent -->
-    <h2>5. Child safety & protection</h2>
-    <p>Protecting young users is a core responsibility at Ather Hive. We maintain strict policies and technical measures to prevent harm and uphold legal standards such as COPPA, GDPR-K, and similar frameworks.</p>
-    
-    <div class="safety-highlight">
-        <p style="margin-bottom: 0.5rem;"><strong>Age restriction & verification</strong><br>
-        Ather Hive is intended for users aged <strong>13 years or older</strong>. We do not knowingly collect, use, or store personal information from children under 13. If we become aware that a user under 13 has registered, we will immediately terminate the account and delete all associated data.</p>
-    </div>
-    
-    <ul>
-        <li><span class="badge">proactive monitoring</span> Our moderation systems flag inappropriate content or behavior that may target minors. Reports are reviewed within 24 hours.</li>
-        <li><span class="badge">parental reporting</span> Parents or guardians can request account removal for any child under 13 by emailing <strong>kitesbite@gmail.com</strong> with “Child Safety – Underage Account” in the subject line.</li>
-        <li><span class="badge">no data sharing</span> We never share or sell any information that could identify a minor, nor do we allow targeted advertising toward any age group.</li>
-        <li><span class="badge">safety resources</span> In-app reporting tools allow users to flag harmful interactions, grooming attempts, or any content that jeopardizes child safety. All reports are escalated to trained moderators.</li>
-        <li><span class="badge">educational guidance</span> We encourage parents to discuss online safety and monitor their children's digital activity. For additional child safety best practices, contact our safety team.</li>
-    </ul>
-    <p>Any attempt to bypass age restrictions or impersonate an adult by a minor will result in permanent account suspension. We cooperate with law enforcement for any credible child exploitation or safety threats.</p>
+<h3>What is prohibited</h3>
+<ul>
+<li>Sharing, requesting, or linking to sexual or sexualized imagery or text involving anyone under 18.</li>
+<li>Grooming, or trying to build a relationship with a minor for sexual purposes.</li>
+<li>Sextortion, or threatening or pressuring a minor for sexual content or money.</li>
+<li>Trading, advertising, or soliciting child exploitation material, including through coded language.</li>
+<li>Using the app to arrange meetings with minors for sexual purposes.</li>
+</ul>
 
-    <!-- 6. Your rights -->
-    <h2>6. Your rights & choices</h2>
-    <p>Depending on your region (including GDPR, CCPA, etc.), you may request:</p>
-    <ul>
-        <li><strong>Access:</strong> Receive a copy of your personal data.</li>
-        <li><strong>Rectification:</strong> Update your username, bio, or avatar via the app.</li>
-        <li><strong>Erasure:</strong> Permanent account deletion (process described above).</li>
-        <li><strong>Restriction / Object:</strong> Limit processing of your data (e.g., feed personalization).</li>
-    </ul>
-    <p>To exercise your rights, email <strong>kitesbite@gmail.com</strong> with “Privacy Request” in the subject line. We will respond within 30 days.</p>
+<h3>Age requirement</h3>
+<p>Ather Hive is for people aged 13 and over. We do not knowingly collect data from children under 13. If we learn that an account belongs to a child under 13, we delete the account and its data. Parents or guardians can request removal at any time using the contact below.</p>
 
-    <!-- 7. Cookies & local storage -->
-    <h2>7. Cookies & local storage</h2>
-    <p>Ather Hive does not use tracking cookies or persistent identifiers for advertising. We store a secure authentication token (JWT) locally on your device to maintain your session. You can clear app data anytime from device settings, which will log you out.</p>
+<h3>How users can report</h3>
+<ul>
+<li><strong>In the app:</strong> open the top right menu and tap <strong>Report</strong> to report a user. You can also use the report option on a message or profile.</li>
+<li><strong>By email:</strong> write to <a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a> with the subject "URGENT: Child Safety".</li>
+</ul>
 
-    <!-- 8. Policy changes -->
-    <h2>8. Changes to this privacy policy</h2>
-    <p>If we make significant changes to our privacy practices, we will notify you via in-app notice (visible when you open the app) and by email (if you provided one). The latest version of this policy will always be available at this page. Continued use after changes constitutes acceptance of the updated policy.</p>
+<h3>What we do when we receive a report or detect a violation</h3>
+<ul>
+<li>Trained moderators review child safety reports within 24 hours.</li>
+<li>We remove the content and permanently ban the account. Offenders are not allowed to return.</li>
+<li>We preserve relevant evidence and report apparent CSAM and child endangerment to the appropriate authorities, such as the National Center for Missing and Exploited Children (NCMEC) and local law enforcement, and we cooperate fully with their investigations.</li>
+<li>We never ask users to send us suspected CSAM. If you see it, report it and do not share or forward it.</li>
+</ul>
 
-    <!-- 9. Contact information – consistent email: kitesbite@gmail.com -->
-    <h2>9. Contact us</h2>
-    <p>For privacy questions, data requests, deletion inquiries, child safety concerns, or abuse reports, please reach out to our data protection and safety team:</p>
-    <div class="contact-block">
-        <span style="font-weight: 500; color:#cdd9ff;">Official support & safety channel:</span>
-        <span class="contact-email">kitesbite@gmail.com</span>
-    </div>
-    <p>We aim to respond to all privacy and child safety inquiries within 5–7 business days. For urgent deletion matters, include “Account Deletion Request – Ather Hive” in the subject. For immediate child safety concerns, mark your email with “URGENT: Child Safety”.</p>
+<h3>Compliance</h3>
+<p>We comply with applicable child safety laws and with the Google Play Child Safety Standards policy. A designated person is responsible for child safety at Ather Hive and is available to discuss our CSAM prevention practices and compliance at the address below.</p>
 
-    <hr />
+<div class="contact">
+Child safety point of contact<br>
+<span class="em"><a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a></span>
+</div>
+<p>If a child is in immediate danger, contact your local emergency services first.</p>
+</section>
 
-    <footer>
-        Ather Hive — where authentic conversations meet uncompromising privacy and child protection.<br />
-        <span style="font-size: 0.7rem;">Your safety, your rights, our priority.</span>
-    </footer>
+<section id="rights">
+<h2>6. Your rights and choices</h2>
+<p>Depending on where you live (for example under GDPR or CCPA), you can ask us to:</p>
+<ul>
+<li><strong>Access</strong> a copy of your personal data.</li>
+<li><strong>Correct</strong> your username, bio, or avatar (you can do this in the app).</li>
+<li><strong>Delete</strong> your account and data yourself in the app under top right menu &gt; Settings &gt; Delete account and data (see section 3).</li>
+<li><strong>Restrict or object</strong> to certain processing.</li>
+</ul>
+<p>Email <a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a> with the subject "Privacy Request". We reply within 30 days.</p>
+</section>
+
+<section id="storage">
+<h2>7. Local storage</h2>
+<p>We do not use advertising cookies or tracking identifiers. The app stores a secure sign-in token on your device to keep you logged in. Clearing the app's data in your device settings signs you out.</p>
+</section>
+
+<section id="changes">
+<h2>8. Changes to this policy</h2>
+<p>If we make significant changes, we will tell you with an in-app notice and, if you gave us an email, by email. The latest version is always on this page. Continuing to use Ather Hive after a change means you accept the updated policy.</p>
+</section>
+
+<section id="contact">
+<h2>9. Contact us</h2>
+<p>For privacy questions, data requests, deletion requests, child safety concerns, or abuse reports:</p>
+<div class="contact">
+Ather Hive support and safety team<br>
+<span class="em"><a href="mailto:orangepenguinflies@gmail.com">orangepenguinflies@gmail.com</a></span>
+</div>
+<p>We aim to answer within 5 to 7 business days. Child safety reports marked "URGENT: Child Safety" are handled first.</p>
+</section>
+
+<footer>Ather Hive &middot; <a href="delete-account.html">Delete your account</a></footer>
 </div>
 </body>
 </html>
